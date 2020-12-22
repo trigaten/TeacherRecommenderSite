@@ -1,9 +1,6 @@
 
 
 .step-container{
-    /* width:auto;
-    margin: 0px;
-    padding: 0px; */
     padding-bottom: 20px;
     width: 80%;
 }
@@ -20,8 +17,3 @@ li{
 
 html{scroll-behavior:smooth}
 
-/* .container{
-    padding: 0px;
-    margin-left: 50px;
-    margin-right: 50px;
-} */
