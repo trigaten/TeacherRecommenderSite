@@ -17,9 +17,8 @@
 }
 
 .step-img{
-    border-radius: 2%;
+    border-radius: 1%;
 }
-
 
 html{
     scroll-behavior:smooth;
