@@ -16,5 +16,13 @@
     padding: 10px;
 }
 
-html{scroll-behavior:smooth}
+.step-img{
+    border-radius: 2%;
+}
+
+
+html{
+    scroll-behavior:smooth;
+    font-family: 'Noto Sans', sans-serif;
+}
 
