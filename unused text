@@ -1,0 +1,18 @@
+<p>
+                    The system works in a few steps. First, you, as the college counselor enter the emails
+                    of the students and teachers who will be writing recommendations. To make this a bit
+                    easier, you can add student email Groups and also remove certain emails if that student
+                    no longer attends your school.
+                </p>
+                <p>
+                    Then, you can automatically create and send Google Forms, first to students, then to teachers.
+                    The student forms will ask students to rank 6 pairs of teacher reccomenders.
+                    The teacher form will ask teachers to consider how strongly they feel they can write
+                    reccomendations for the students who listed them.
+                </p>
+                <p>
+                    After the results have been collected you can run an algorithm which goes along the lists of data
+                    and finds the student/teacher matchess which have the highest scores.
+                    You can review these pairings, make any changes you would like, and automatically send assignments
+                    and pairings to teachers and students.
+                </p>
