@@ -11,8 +11,9 @@
     padding-left: 100px;
 }
 
-li{
+.step-li-item{
     color: black;
+    padding: 10px;
 }
 
 html{scroll-behavior:smooth}
