@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- TODO load javascript last -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +17,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
     <!-- font awesome -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="styles.css">
 
@@ -25,14 +27,24 @@
             $('.materialboxed').materialbox();
             $('.sidenav').sidenav();
         });
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos || currentScrollPos < 20) {
+                document.getElementById("navbar").style.top = "0px";
+            } else {
+                document.getElementById("navbar").style.top = "-150px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
     </script>
 </head>
 
 <body>
-    <nav class="nav-extended indigo darken-3">
+    <nav class="nav-extended indigo darken-3" id="navbar">
         <div class="nav-wrapper">
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            
+
             <ul id="nav-mobile" class="left hide-on-med-and-down">
                 <li> <a href="#" class="brand-logo"><img src="images/logo.png" style="width:75px;" class="left"></a>
                 </li>
@@ -49,7 +61,7 @@
                 <a href="" class="breadcrumb center">What is this?</a>
             </span>
 
-            
+
         </div>
 
         <div class="nav-content teal lighten-2 center" style="padding:10px">
@@ -83,10 +95,10 @@
                             of matching students with their teacher reccomenders for college more efficient.
                         </p>
                         <h5>The Problem</h5>
-                        Highschool students need college recommendation letters from their teachers. 
+                        Highschool students need college recommendation letters from their teachers.
                         Usually, they need 2 recommendation letters, one from a STEM teacher and one from
-                        a non-STEM teacher. Students go around asking teachers if they can 
-                        letters for them. This can result in teachers overcommitting to writing too many 
+                        a non-STEM teacher. Students go around asking teachers if they can
+                        letters for them. This can result in teachers overcommitting to writing too many
                         letters or feeling pressured to say yes to the first students who ask them. Using this
                         method makes it difficult to keep track of whether all students have confirmed recommenders.
                         <h5>The Solution</h5>
@@ -96,7 +108,7 @@
                         a Google Sheet with them. The simple Google Sheet interface used by college counselors allows
                         them to keep track of the entire process and make sure all students are on track.
                         <h5>The System</h5>
-                        College counselors control the system through a sidebar in a Google Sheet. 
+                        College counselors control the system through a sidebar in a Google Sheet.
                         It has clearly defined steps and allows you to send automatically generate
                         forms, send emails (and reminder emails!), add/remove students and teachers,
                         and edit any results before automatically sending them out.
@@ -105,13 +117,13 @@
                         </p>
                     </div>
                     <div class="card-action teal">
-                         <a href="#">See tutorial</a>
+                        <a href="#">See tutorial</a>
                     </div>
                 </div>
             </div>
             <div class="col s12 m6">
-                
-                </div>
+
+            </div>
         </div>
     </div>
 
@@ -126,8 +138,8 @@
                         I would love to chat about how I can make this system work for you.
 
                     <p>
-                        <a style="color:white"
-                            href="mailto:TeacherRecSystem@gmail.com"><i class="fa fa-envelope fa-lg"></i> : TeacherRecSystem@gmail.com</a>
+                        <a style="color:white" href="mailto:TeacherRecSystem@gmail.com"><i
+                                class="fa fa-envelope fa-lg"></i> : TeacherRecSystem@gmail.com</a>
                     </p>
                     Personal<br>
                     <p>
@@ -135,15 +147,16 @@
                             2290</a>
                     </p>
                     <p>
-                        <a style="color:white"
-                            href="mailto:sanderschulhoff@gmail.com"><i class="fa fa-envelope fa-lg"></i> : sanderschulhoff@gmail.com</a>
+                        <a style="color:white" href="mailto:sanderschulhoff@gmail.com"><i
+                                class="fa fa-envelope fa-lg"></i> : sanderschulhoff@gmail.com</a>
 
                     </p>
                     </p>
                 </div>
                 <div class="col l4 offset-l3 s12">
                     <h5>Schools using this program:</h5>
-                    <a href="https://www.friendsbalt.org/"><img src="images/fsb.jpeg" width="50" style="border-radius: 100px;"></a>
+                    <a href="https://www.friendsbalt.org/"><img src="images/fsb.jpeg" width="50"
+                            style="border-radius: 100px;"></a>
                 </div>
             </div>
         </div>
@@ -151,7 +164,8 @@
             <div class="container">
 
                 © 2020 Copyright TRS
-                <div class="right">Please contact me if you would like to request an addition to this system or other automation services</div>
+                <div class="right">Please contact me if you would like to request an addition to this system or other
+                    automation services</div>
             </div>
         </div>
     </footer>

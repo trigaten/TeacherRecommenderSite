@@ -28,4 +28,5 @@ html{
 nav{
     position: fixed;
     z-index: 5;
+    transition: top 0.3s;
 }

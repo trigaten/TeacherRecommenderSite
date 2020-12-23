@@ -21,8 +21,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <!-- font -->
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="styles.css">
 
@@ -31,13 +31,24 @@
             $('.materialboxed').materialbox();
             $('.sidenav').sidenav();
         });
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos || currentScrollPos < 40) {
+                document.getElementById("navbar").style.top = "150px";
+            } else {
+                document.getElementById("navbar").style.top = "0";
+            }
+            prevScrollpos = currentScrollPos;
+        }
     </script>
 </head>
 
 <body>
-    <nav class="nav-extended indigo darken-3" style="margin-top: -150px;">
+    <nav class="nav-extended indigo darken-3" style="margin-top: -150px;" id="navbar">
         <div class="nav-wrapper">
-            <span class="hide-on-med-and-down"><a href="#" class="brand-logo"><img src="images/logo.png" style="width:75px"></a>
+            <span class="hide-on-med-and-down"><a href="#" class="brand-logo"><img src="images/logo.png"
+                        style="width:75px"></a>
             </span>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down" style="margin-left: 100px;">
@@ -69,7 +80,7 @@
         <h1 class="teal-text hide-on-med-and-down">Teacher Recommender System</h1>
         <h3 class="teal-text show-on-medium-and-down hide-on-med-and-up">Teacher Recommender System</h3>
         <h5 style="margin-bottom:30px;margin-left:10px;margin-right:10px;" class="teal-text lighten-2-text">
-            
+
             Control the teacher recommender process
             with <b>three</b> easy steps</h5>
     </div>
@@ -79,25 +90,26 @@
         <div class="row">
             <div class="col m12 l6">
                 <div class="flowtext">
-                <blockquote>
-                    The Teacher Recommendation System (TRS) allows school counselors to easily connect students
-                    with their teacher recommenders for college. Follow the steps below to collect data and make
-                    pairings
-                </blockquote>
+                    <blockquote>
+                        The Teacher Recommendation System (TRS) allows school counselors to easily connect students
+                        with their teacher recommenders for college. Follow the steps below to collect data and make
+                        pairings
+                    </blockquote>
                 </div>
                 <br>
 
                 <h6 class="left"><strong>Quick Benefits</strong> (<a href="what.html">See More</a>): </h6>
                 <br>
                 <blockquote>
-                <ul>
-                    <li style="color: black; text-align: left;">Keep track of student and teacher progress</li>
-                    <li style="color: black; text-align: left;">Ensure a fair and equitable process which finds good
-                        matches between students and teachers</li>
-                    <li style="color: black; text-align: left;">Allow teachers to set hard limits on their quantity of
-                        letters</li>
-                </ul>
-            </blockquote>
+                    <ul>
+                        <li style="color: black; text-align: left;">Keep track of student and teacher progress</li>
+                        <li style="color: black; text-align: left;">Ensure a fair and equitable process which finds good
+                            matches between students and teachers</li>
+                        <li style="color: black; text-align: left;">Allow teachers to set hard limits on their quantity
+                            of
+                            letters</li>
+                    </ul>
+                </blockquote>
             </div>
             <div class="col m12 l6">
                 <img class="materialboxed responsive-img step-img z-depth-5" src="images/TRS.png">
@@ -113,16 +125,16 @@
                     <h5>Step 1: </h5>
                     <!-- <div class="divider" style="background-color: black;"></div> -->
                     <blockquote>
-                    <ul>
-                        <li class="step-li-item">Enter the emails of the students and teachers into
-                            a Google Sheet.</li>
-                        <li class="step-li-item">Click buttons to automatically generate forms and
-                            send them to the students.</li>
-                        <li class="step-li-item">The student form will ask each student to rank
-                            pairs of teacher
-                            recommenders.</li>
-                    </ul>
-                </blockquote>
+                        <ul>
+                            <li class="step-li-item">Enter the emails of the students and teachers into
+                                a Google Sheet.</li>
+                            <li class="step-li-item">Click buttons to automatically generate forms and
+                                send them to the students.</li>
+                            <li class="step-li-item">The student form will ask each student to rank
+                                pairs of teacher
+                                recommenders.</li>
+                        </ul>
+                    </blockquote>
                 </div>
                 <div class="col m12 l7 offset-l1">
                     <div style="margin-top: 20px;" class="right">
@@ -141,17 +153,17 @@
                 <div class="col m12 l4">
                     <h5>Step 2: </h5>
                     <blockquote>
-                    <ul>
-                        <li class="step-li-item">Click buttons to generate and send teacher
-                            forms.</li>
-                        <li class="step-li-item">These forms will ask the teachers to decide how
-                            strongly they feel that
-                            they can write a good reccomendation letter for the students that selected them.</li>
-    
-                    </ul>
-                </blockquote>
+                        <ul>
+                            <li class="step-li-item">Click buttons to generate and send teacher
+                                forms.</li>
+                            <li class="step-li-item">These forms will ask the teachers to decide how
+                                strongly they feel that
+                                they can write a good reccomendation letter for the students that selected them.</li>
+
+                        </ul>
+                    </blockquote>
                     <!-- <div class="divider" style="background-color: black;"></div> -->
-                    
+
                 </div>
                 <div class="col m12 l7 offset-l1">
                     <div style="margin-top: 20px;" class="right">
@@ -173,13 +185,14 @@
                     <h5>Step 3: </h5>
                     <!-- <div class="divider" style="background-color: black;"></div> -->
                     <blockquote>
-                    <ul>
-                        <li class="step-li-item">After all results have been collected, run the
-                            algorithm, review the results,
-                            and automatically send emails to students and teachers with their respective assignments</a>
-                        </li>
-                    </ul>
-                </blockquote>
+                        <ul>
+                            <li class="step-li-item">After all results have been collected, run the
+                                algorithm, review the results,
+                                and automatically send emails to students and teachers with their respective
+                                assignments</a>
+                            </li>
+                        </ul>
+                    </blockquote>
 
                 </div>
                 <div class="col m12 l7 offset-l1">
@@ -231,18 +244,19 @@
                 <div class="col s12">
                     <h5>Get TRS for your school </h5>
                     <div class="divider" style="background-color: black;"></div>
-                        <div class="white-text">
-                            <p>
-                                Currently I am offering the system as a <u>free service</u> for the coming year. </p>
-                            <p>If you would like to use it for your school, please contact me at
-                                <u><a style="color:white"
-                                    href="mailto:TeacherRecSystem@gmail.com">TeacherRecSystem@gmail.com</a></u> or find other contact information below.</p>
-                            <p>The setup is very simple (just install a GSheet add-on) and I can walk you through
-                                every step of the process if needed.</p>
-                            <p>Again, the system is free for this year; I hope to collect data from users
-                                on how to improve it.
-                            </p>
-                        </div>
+                    <div class="white-text">
+                        <p>
+                            Currently I am offering the system as a <u>free service</u> for the coming year. </p>
+                        <p>If you would like to use it for your school, please contact me at
+                            <u><a style="color:white"
+                                    href="mailto:TeacherRecSystem@gmail.com">TeacherRecSystem@gmail.com</a></u> or find
+                            other contact information below.</p>
+                        <p>The setup is very simple (just install a GSheet add-on) and I can walk you through
+                            every step of the process if needed.</p>
+                        <p>Again, the system is free for this year; I hope to collect data from users
+                            on how to improve it.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -260,8 +274,8 @@
                         I would love to chat about how I can make this system work for you.
 
                     <p>
-                        <a style="color:white"
-                            href="mailto:TeacherRecSystem@gmail.com"><i class="fa fa-envelope fa-lg"></i> : TeacherRecSystem@gmail.com</a>
+                        <a style="color:white" href="mailto:TeacherRecSystem@gmail.com"><i
+                                class="fa fa-envelope fa-lg"></i> : TeacherRecSystem@gmail.com</a>
                     </p>
                     Personal<br>
                     <p>
@@ -269,15 +283,16 @@
                             2290</a>
                     </p>
                     <p>
-                        <a style="color:white"
-                            href="mailto:sanderschulhoff@gmail.com"><i class="fa fa-envelope fa-lg"></i> : sanderschulhoff@gmail.com</a>
+                        <a style="color:white" href="mailto:sanderschulhoff@gmail.com"><i
+                                class="fa fa-envelope fa-lg"></i> : sanderschulhoff@gmail.com</a>
 
                     </p>
                     </p>
                 </div>
                 <div class="col l4 offset-l3 s12">
                     <h5>Schools using this program:</h5>
-                    <a href="https://www.friendsbalt.org/"><img src="images/fsb.jpeg" width="50" style="border-radius: 100px;" step-img z-depth-5></a>
+                    <a href="https://www.friendsbalt.org/"><img src="images/fsb.jpeg" width="50"
+                            style="border-radius: 100px;" step-img z-depth-5></a>
                 </div>
             </div>
         </div>
@@ -285,7 +300,8 @@
             <div class="container">
 
                 © 2020 Copyright TRS
-                <div class="right">Please contact me if you would like to request an addition to this system or other automation services</div>
+                <div class="right">Please contact me if you would like to request an addition to this system or other
+                    automation services</div>
             </div>
         </div>
     </footer>
