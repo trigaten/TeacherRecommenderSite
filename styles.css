@@ -25,3 +25,7 @@ html{
     font-family: 'Noto Sans', sans-serif;
 }
 
+nav{
+    position: fixed;
+    z-index: 5;
+}
