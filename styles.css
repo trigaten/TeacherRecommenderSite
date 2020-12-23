@@ -30,3 +30,7 @@ nav{
     z-index: 5;
     transition: top 0.3s;
 }
+
+span.thicker {
+    font-weight: 900;
+  }
