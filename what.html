@@ -31,9 +31,9 @@
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos || currentScrollPos < 20) {
-                document.getElementById("navbar").style.top = "0px";
+                document.getElementById("navbar").style.top = "-1px";
             } else {
-                document.getElementById("navbar").style.top = "-153px";
+                document.getElementById("navbar").style.top = "-150px";
             }
             prevScrollpos = currentScrollPos;
         }
