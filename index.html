@@ -31,10 +31,15 @@
             $('.materialboxed').materialbox();
             $('.sidenav').sidenav();
 
-
-            $(".nav-extended, #title-area, #info-area, #stats-area, #first-step, #second-step, #third-step, black-line, tutorial, buy, footer").each(function (i) {
+            if (screen.width > 768){
+            $(".nav-extended, #title-area, #info-area, #stats-area, #first-step, #second-step, #third-step, #black-line, #tutorial, #buy, #footer").each(function (i) {
                 $(this).delay(i * 300).fadeIn(700);
             });
+            }else{
+                $(".nav-extended, #title-area, #info-area, #stats-area, #cc-feat, #first-step, #second-step, #third-step, #black-line, #tutorial, #buy, #footer").each(function (i) {
+                $(this).delay(i * 400).fadeIn(700);
+            });
+            }
         });
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
@@ -72,9 +77,8 @@
             </ul>
         </div>
         <div class="nav-content teal lighten-2 center" style="padding:10px">
-            This program is free for <b>underfunded</b> schools and is <b>free</b> to try (no need to fill out any
-            paperwork, just shoot me an <a style="color: white"
-                href="mailto:TeacherRecSystem@gmail.com"><b>email</b></a>)
+             <a style="color: white"
+                href="mailto:TeacherRecSystem@gmail.com">This program is free for <b>underfunded</b> schools and is <b>free</b> to <b>try</b></a>
         </div>
     </nav>
 
@@ -112,8 +116,11 @@
                         for college. Follow the steps <a href="#first-step">below</a> to collect data and make pairings.
                     </blockquote>
                 </div>
-                <br>
 
+
+                
+                <div id="cc-feat" class="hide-on-med-and-down">
+                    <br>
                 <h6 class="left"><strong>Features for <span style="text-decoration: underline;">college
                             counselors</span></strong>: </h6>
                 <br>
@@ -131,9 +138,31 @@
                     </ul>
                 </blockquote>
             </div>
+            </div>
             <div class="col m12 l6">
                 <img class="materialboxed responsive-img step-img z-depth-5" src="images/TRS.png">
             </div>
+        </div>
+        <div class="row">
+            <div id="cc-feat" class="hide-on-med-and-up" style="display: none;">
+                <br>
+            <h6 class="left"><strong>Features for <span style="text-decoration: underline;">college
+                        counselors</span></strong>: </h6>
+            <br>
+            <blockquote>
+                <ul style="margin-left: 20px;">
+                    <li style="color: black; text-align: left;list-style-type: disc;"><span
+                            style="margin-left:-4px"> Control the entire process from within a Google Sheet</span>
+                    </li>
+                    <li style="color: black; text-align: left;list-style-type: disc;"><span
+                            style="margin-left:-4px">Use automated forms and emails to collect information</span>
+                    </li>
+                    <li style="color: black; text-align: left;list-style-type: disc;"><span
+                            style="margin-left:-4px">Ensure a fair process for students and teachers</span>
+                    </li>
+                </ul>
+            </blockquote>
+        </div>
         </div>
         <div class="row" id="stats-area" style="display: none;">
             <div class="col l6">
@@ -150,7 +179,7 @@
                                 set hard limits on their quantity
                                 of letters</span> </li>
                         <li style="color: black; text-align: left;list-style-type: disc;"><span
-                                style="margin-left:-4px">Everyone fills out one Google Form which takes ~5 minutes</span> </li>
+                                style="margin-left:-4px">Everyone fills out one Google Form which takes ~2 minutes</span> </li>
                     </ul>
                 </blockquote>
             </div>
@@ -325,7 +354,7 @@
                         <p class="white-text">The price can work on a sliding scale depending on your school's finances.
                         </p>
                         <p class="white-text">
-                            If your school cannot afford this system you can use it for free.
+                            If your school cannot afford this system, you can use it for free.
                         </p>
 
 
