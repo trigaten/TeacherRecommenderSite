@@ -30,14 +30,19 @@
         $(document).ready(function () {
             $('.materialboxed').materialbox();
             $('.sidenav').sidenav();
+
+
+            $(".nav-extended, #title-area, #info-area, #stats-area, #first-step, #second-step, #third-step, black-line, tutorial, buy, footer").each(function (i) {
+                $(this).delay(i * 300).fadeIn(700);
+            });
         });
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos || currentScrollPos < 40) {
-                document.getElementById("navbar").style.top = "149px";
+                document.getElementById("navbar").style.top = "120px";
             } else {
-                document.getElementById("navbar").style.top = "0";
+                document.getElementById("navbar").style.top = "-20px";
             }
             prevScrollpos = currentScrollPos;
         }
@@ -45,16 +50,21 @@
 </head>
 
 <body>
-    <nav class="nav-extended indigo darken-3" style="margin-top: -151px;" id="navbar">
+    <nav class="nav-extended indigo darken-3" style="margin-top: -121px;display: none;" id="navbar">
         <div class="nav-wrapper">
-            <!-- <span class="hide-on-med-and-down left"><a href="#" class="brand-logo"><img src="images/logo.png"
-                        style="width:75px"></a>
-            </span> -->
+            <span class="hide-on-med-and-down left"><a href="#" class="brand-logo"><img src="images/logo.png"
+                        style="width:68px"></a>
+            </span>
+
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul id="nav-mobile" class="left hide-on-med-and-down"> <!-- style="margin-left: 100px;" -->
-                <li><a href="what.html">What is this?</a></li>
+            <span class="hide-on-med-and-up right"><a href="#" class="brand-logo"><img src="images/logo.png"
+                        style="width:52px"></a></span>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <!-- style="margin-left: 100px;" -->
+                <!-- <li><a href="what.html">What is this?</a></li> -->
             </ul>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="#tutorial">FAQ</a></li>
                 <li><a href="#tutorial">Tutorial</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#buy">Buy<span class="new badge" data-badge-caption="Free Trial"></span>
@@ -63,7 +73,8 @@
         </div>
         <div class="nav-content teal lighten-2 center" style="padding:10px">
             This program is free for <b>underfunded</b> schools and is <b>free</b> to try (no need to fill out any
-            paperwork, just shoot me an <a style="color: white" href="mailto:TeacherRecSystem@gmail.com"><b>email</b></a>)
+            paperwork, just shoot me an <a style="color: white"
+                href="mailto:TeacherRecSystem@gmail.com"><b>email</b></a>)
         </div>
     </nav>
 
@@ -76,40 +87,47 @@
             </a></li>
     </ul>
 
-    <div class="col s12 valign center-align" style="margin-top: 150px;">
+    <div class="col s12 valign center-align" style="margin-top: 120px;display: none;" id="title-area">
         <!-- sloppy, but small site -->
-        <h1 class="teal-text text-darken-1 hide-on-med-and-down">Teacher Recommender System</h1>
+        <h1 class="hide-on-med-and-down teal-text text-darken-1" style="margin-bottom: 0px;">
+            Teacher Recommender System
+        </h1>
+        <br>
         <h3 class="teal-text text-darken-1 show-on-medium-and-down hide-on-med-and-up">Teacher Recommender System</h3>
         <h5 style="margin-bottom:30px;margin-left:10px;margin-right:10px;" class="teal-text lighten-3-text">
-
-            Control the teacher recommender process
-            with <span class="thicker">three</span> easy steps</h5>
+            Control the teacher recommender process with <span class="thicker">three</span> easy steps</h5>
     </div>
 
 
     <div class="container">
-        <div class="row">
+
+        <div class="row" id="info-area" style="display: none;">
             <div class="col m12 l6">
+                <h6 class="left"><strong>TRS Intro:</strong></h6>
+        <br>
                 <div class="flowtext">
                     <blockquote>
-                        The Teacher Recommendation System (TRS) allows school counselors to easily connect students
-                        with their teacher recommenders for college. Follow the steps below to collect data and make
-                        pairings
+                        The Teacher Recommendation System (TRS) is a Google Sheet add-on which allows college 
+                        counselors to fairly and efficiently connect students with their teacher recommenders 
+                        for college. Follow the steps <a href="#first-step">below</a> to collect data and make pairings.
                     </blockquote>
                 </div>
                 <br>
 
-                <h6 class="left"><strong>Quick Benefits</strong> (<a href="what.html">See More</a>): </h6>
+                <h6 class="left"><strong>Features for <span style="text-decoration: underline;">college
+                            counselors</span></strong>: </h6>
                 <br>
                 <blockquote>
-                    <ul>
-                        <li style="color: black; text-align: left;">Use school Google accounts for every step of the
-                            process</li>
-                        <li style="color: black; text-align: left;">Ensure a fair and equitable process which finds good
-                            matches between students and teachers</li>
-                        <li style="color: black; text-align: left;">Allow teachers to set hard limits on their quantity
-                            of
-                            letters</li>
+                    <ul style="margin-left: 20px;">
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px"> Control the entire process from within a Google Sheet</span>
+                        </li>
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px">Use automated forms and emails to collect information</span>
+                        </li>
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px">Ensure a fair process for students and teachers</span>
+                        </li>
                     </ul>
                 </blockquote>
             </div>
@@ -117,10 +135,54 @@
                 <img class="materialboxed responsive-img step-img z-depth-5" src="images/TRS.png">
             </div>
         </div>
-    </div>
+        <div class="row" id="stats-area" style="display: none;">
+            <div class="col l6">
+                <h6 class="left"><strong>Features for <span style="text-decoration: underline;">students and
+                            teachers</span></strong>: </h6>
+                <br>
+                <blockquote>
+                    <ul style="margin-left: 20px;">
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px">
+                                Matches are made between students and teachers who want to be together</span></li>
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px">Teachers can
+                                set hard limits on their quantity
+                                of letters</span> </li>
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px">Everyone fills out one Google Form which takes ~5 minutes</span> </li>
+                    </ul>
+                </blockquote>
+            </div>
+            <div class="col l6">
+                <h1 class="teal-text" style="margin-top: 0;margin-bottom: 0;"><span id="count-percent">1</span>%</h1>
+                <span class="teal-text large-text">of students got their first or second teacher pair
+                    choice</span>&nbsp;&nbsp;&nbsp;<span>(live trial at <a
+                        href="https://www.friendsbalt.org">FSB</a>)</span>
 
+            </div>
+        </div>
+
+    </div>
+    <script>
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        const obj = document.getElementById('count-percent');
+        animateValue(obj, 1, 97, 2000);
+    </script>
     <!-- step 1 -->
-    <div class="blue lighten-4">
+    <div class="blue lighten-4" style="display: none;" id="first-step">
         <div class="container step-container">
             <div class="row">
                 <div class="col m12 l4">
@@ -148,7 +210,7 @@
         </div>
     </div>
     <!-- step 2 -->
-    <div class="blue lighten-3">
+    <div class="blue lighten-3" style="display: none;" id="second-step">
         <div class="container step-container">
             <div class="row">
                 <div class="col m12 l4">
@@ -168,17 +230,14 @@
                 <div class="col m12 l7 offset-l1">
                     <div style="margin-top: 20px;" class="right">
                         <img class="materialboxed responsive-img z-depth-5 step-img" src="images/TRS.png">
-
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
 
     <!-- step 3 -->
-    <div class="blue lighten-2">
+    <div class="blue lighten-2" style="display: none;" id="third-step">
         <div class="container step-container">
             <div class="row">
                 <div class="col m12 l4">
@@ -204,11 +263,11 @@
     </div>
 
     <!-- black line divider (5 pixels high) -->
-    <div style="height: 3px;background-color: black;"></div>
+    <div style="height: 3px;background-color: black;display: none;" id="black-line"></div>
 
 
     <!-- Tutorial section -->
-    <div class="teal lighten-4">
+    <div class="teal lighten-4" style="display: none;" id="tutorial">
         <div class="container step-container" id="tutorial">
             <div class="row">
                 <div class="col s12">
@@ -233,32 +292,34 @@
     </div>
 
     <!-- buy section -->
-    <div class="teal lighten-3">
+    <div class="teal lighten-3" style="display: none;" id="buy">
         <div class="container step-container" id="buy">
             <div class="row">
                 <br>
                 <div class="col-12">
-                <h5>Get TRS for your school </h5>
-                <div class="divider" style="background-color: black;"></div>
-                <div class="col s12 m6">
-                    
-                    
-                    <div class="white-text">
-                        <p>
-                            Currently I am offering the system as a <u>free service</u> for the coming year. </p>
-                        <p>If you would like to use it for your school, please contact me at
-                            <u><a style="color:white"
-                                    href="mailto:TeacherRecSystem@gmail.com">TeacherRecSystem@gmail.com</a></u> or find
-                            other contact information below.</p>
-                        <p>The setup is very simple (just install a GSheet add-on) and I can walk you through
-                            every step of the process if needed.</p>
-                        <p>Again, the system is free for this year; I hope to get insight on how to improve it.
-                        </p>
+                    <h5>Get TRS for your school </h5>
+                    <div class="divider" style="background-color: black;"></div>
+                    <div class="col s12 m6">
+
+
+                        <div class="white-text">
+                            <p>
+                                Currently I am offering the system as a <u>free service</u> for the coming year. </p>
+                            <p>If you would like to use it for your school, please contact me at
+                                <u><a style="color:white"
+                                        href="mailto:TeacherRecSystem@gmail.com">TeacherRecSystem@gmail.com</a></u> or
+                                find
+                                other contact information below.
+                            </p>
+                            <p>The setup is very simple (just install a GSheet add-on) and I can walk you through
+                                every step of the process if needed.</p>
+                            <p>Again, the system is free for this year; I hope to get insight on how to improve it.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="col s12 m5 text-align-center offset-m1">
-                    <h5 class="white-text">What will it cost afterwards?</h5>
-                    <p class="white-text">
+                    <div class="col s12 m5 text-align-center offset-m1">
+                        <h5 class="white-text">What will it cost afterwards?</h5>
+                        <p class="white-text">
                         <p class="white-text">I am considering a yearly subscription model of 1$ per student.
                         </p>
                         <p class="white-text">The price can work on a sliding scale depending on your school's finances.
@@ -267,17 +328,17 @@
                             If your school cannot afford this system you can use it for free.
                         </p>
 
-                        
-                    </p>
+
+                        </p>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>
 
 
     <!-- footer -->
-    <footer class="page-footer teal">
+    <footer class="page-footer teal" style="display: none;" id="footer">
         <div class="container">
             <div class="row">
                 <div class="col l5 s12">
@@ -297,11 +358,10 @@
                     <p>
                         <a style="color:white" href="mailto:sanderschulhoff@gmail.com"><i
                                 class="fa fa-envelope fa-lg"></i> : sanderschulhoff@gmail.com</a>
-
                     </p>
                     </p>
                 </div>
-                <div class="col l4 offset-l3 s12">
+                <div class="col l5 offset-l2 s12">
                     <h5>Schools using this program:</h5>
                     <a href="https://www.friendsbalt.org/"><img src="images/fsb.jpeg" width="50"
                             style="border-radius: 100px;" step-img z-depth-5></a>

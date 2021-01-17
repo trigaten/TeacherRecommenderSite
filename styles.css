@@ -34,3 +34,8 @@ nav{
 span.thicker {
     font-weight: 900;
   }
+
+.large-text{
+    font-size: 25px;
+}
+  header > h5 { display: inline-block; }
