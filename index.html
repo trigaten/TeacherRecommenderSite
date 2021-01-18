@@ -44,7 +44,7 @@
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos || currentScrollPos < 60) {
+            if (prevScrollpos > currentScrollPos || currentScrollPos < 40) {
                 document.getElementById("navbar").style.top = "120px";
             } else {
                 document.getElementById("navbar").style.top = "-20px";
@@ -55,7 +55,7 @@
 </head>
 
 <body>
-    <nav class="nav-extended indigo darken-3" style="margin-top: -121px;display: none;" id="navbar">
+    <nav class="nav-extended indigo darken-3" style="margin-top: -121px;display: none;top:120px" id="navbar">
         <div class="nav-wrapper">
             <span class="hide-on-med-and-down left"><a href="#" class="brand-logo"><img src="images/logo.png"
                         style="width:68px"></a>
@@ -265,8 +265,7 @@
                     <h5>Step 2: </h5>
                     <blockquote>
                         <ul>
-                            <li class="step-li-item">Click buttons to generate and send teacher
-                                forms.</li>
+                            <li class="step-li-item">Click buttons to generate and send student selection forms to be filled out by the teachers.</li>
                             <li class="step-li-item">These forms will ask the teachers to decide how
                                 strongly they feel that
                                 they can write a good reccomendation letter for the students that selected them.</li>
