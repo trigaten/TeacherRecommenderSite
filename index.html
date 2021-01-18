@@ -31,20 +31,20 @@
             $('.materialboxed').materialbox();
             $('.sidenav').sidenav();
 
-            if (screen.width > 768){
-            $(".nav-extended, #title-area, #info-area, #stats-area, #first-step, #second-step, #third-step, #black-line, #tutorial, #buy, #footer").each(function (i) {
-                $(this).delay(i * 300).fadeIn(700);
-            });
-            }else{
+            if (screen.width > 768) {
+                $(".nav-extended, #title-area, #info-area, #stats-area, #first-step, #second-step, #third-step, #black-line, #tutorial, #buy, #footer").each(function (i) {
+                    $(this).delay(i * 300).fadeIn(700);
+                });
+            } else {
                 $(".nav-extended, #title-area, #info-area, #stats-area, #cc-feat, #cc-feat2, #first-step, #second-step, #third-step, #black-line, #tutorial, #buy, #footer").each(function (i) {
-                $(this).delay(i * 400).fadeIn(700);
-            });
+                    $(this).delay(i * 400).fadeIn(700);
+                });
             }
         });
         var prevScrollpos = window.pageYOffset;
         window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos || currentScrollPos < 40) {
+            if (prevScrollpos > currentScrollPos || currentScrollPos < 60) {
                 document.getElementById("navbar").style.top = "120px";
             } else {
                 document.getElementById("navbar").style.top = "-20px";
@@ -76,10 +76,10 @@
                     </a></li>
             </ul>
         </div>
-        <div class="nav-content teal lighten-2 center" style="padding:10px">
+        <!-- <div class="nav-content teal lighten-2 center" style="padding:10px">
              <a style="color: white"
                 href="mailto:TeacherRecSystem@gmail.com">This program is free for <b>underfunded</b> schools and is <b>free</b> to <b>try</b></a>
-        </div>
+        </div> -->
     </nav>
 
     <!-- side bar which appears for small screens -->
@@ -91,15 +91,17 @@
             </a></li>
     </ul>
 
-    <div class="col s12 valign center-align" style="margin-top: 120px;display: none;" id="title-area">
+    <div class="col s12 valign center-align" style="margin-top: 80px;display: none;" id="title-area">
         <!-- sloppy, but small site -->
         <h1 class="hide-on-med-and-down blue-text text-darken-4" style="margin-bottom: -25px;">
             Teacher Recommender System
         </h1>
         <br>
-        <h3 style="margin-bottom:-25px;"  class="blue-text text-darken-4 show-on-medium-and-down hide-on-med-and-up">Teacher Recommender System</h3>
-        <h5 style="margin-bottom:40px;margin-left:10px;margin-right:10px;margin-top:50px" class="teal-text lighten-3-text">
-            Control the teacher recommender process with <span class="thicker">three</span> easy steps</h5>
+        <h3 style="margin-bottom:-25px;" class="blue-text text-darken-4 show-on-medium-and-down hide-on-med-and-up">
+            Teacher Recommender System</h3>
+        <h5 style="margin-bottom:40px;margin-left:10px;margin-right:10px;margin-top:50px"
+            class="teal-text lighten-3-text">
+            Track and control the teacher recommender process with <span class="thicker">three</span> easy steps</h5>
     </div>
 
 
@@ -108,39 +110,45 @@
         <div class="row" id="info-area" style="display: none;">
             <div class="col m12 l6">
                 <h6 class="left"><strong>TRS Intro:</strong></h6>
-        <br>
+                <br>
                 <div class="flowtext">
                     <blockquote>
-                        The Teacher Recommendation System (TRS) is a Google Sheet add-on which allows college 
-                        counselors to fairly and efficiently connect students with their teacher recommenders 
-                        for college. Follow the <a href="#first-step">steps</a> below to collect data and make teacher/student pairings.
+                        The Teacher Recommendation System (TRS) is a Google Sheet add-on which allows college
+                        counselors to efficiently and fairly connect students with their teacher recommenders
+                        for college. Follow the <a href="#first-step">steps</a> below to collect data and make
+                        teacher/student pairings.
                     </blockquote>
                 </div>
 
 
-                
-                <div id="cc-feat" class="hide-on-med-and-down" >
+                <div id="cc-feat" class="hide-on-med-and-down">
                     <br>
-                <h6 class="left"><strong>Benefits for <span style="text-decoration: underline;">college
-                            counselors</span></strong>: </h6>
-                <br>
-                <blockquote>
-                    <ul style="margin-left: 20px;">
-                        <li style="color: black; text-align: left;list-style-type: disc;"><span
-                                style="margin-left:-4px"> Track and control the entire process from within a Google Sheet</span>
-                        </li>
-                        <li style="color: black; text-align: left;list-style-type: disc;"><span
-                                style="margin-left:-4px">Ensure a fair process for students and teachers</span>
-                        </li>
-                        <li style="color: black; text-align: left;list-style-type: disc;"><span
-                                style="margin-left:-4px">Use Google Forms and automated emails to collect information</span>
-                        </li>
-                        <li style="color: black; text-align: left;list-style-type: disc;"><span
-                            style="margin-left:-4px">Easily view what teachers/students have completed their forms and send reminder emails.</span>
-                    </li>
-                    </ul>
-                </blockquote>
-            </div>
+                    <h6 class="left"><strong>Benefits for <span style="text-decoration: underline;">college
+                                counselors</span></strong>: </h6>
+                    <br>
+                    <blockquote>
+                        <ul style="margin-left: 20px;">
+                            <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                    style="margin-left:-4px"> Track and control the entire pairing process from within a
+                                    Google Sheet</span>
+                            </li>
+                            <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                    style="margin-left:-4px">Ensure a fair process for students and teachers</span>
+                            </li>
+                            <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                    style="margin-left:-4px">Use Google Forms and automated emails to collect
+                                    information</span>
+                            </li>
+                            <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                    style="margin-left:-4px">Quickly view which teachers/students have completed their
+                                    forms.</span>
+                            </li>
+                            <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                    style="margin-left:-4px">Easily send reminder emails to teachers/students</span>
+                            </li>
+                        </ul>
+                    </blockquote>
+                </div>
             </div>
             <div class="col m12 l6">
                 <img class="materialboxed responsive-img step-img z-depth-5" src="images/TRS.png">
@@ -149,26 +157,32 @@
         <div class="row">
             <div id="cc-feat2" class="hide-on-med-and-up">
                 <br>
-            <h6 class="left"><strong>Benefits for <span style="text-decoration: underline;">college
-                        counselors</span></strong>: </h6>
-            <br>
-            <blockquote>
-                <ul style="margin-left: 20px;">
-                    <li style="color: black; text-align: left;list-style-type: disc;"><span
-                            style="margin-left:-4px"> Track and control the entire pairing process from within a Google Sheet</span>
-                    </li>
-                    <li style="color: black; text-align: left;list-style-type: disc;"><span
-                            style="margin-left:-4px">Ensure a fair process for students and teachers</span>
-                    </li>
-                    <li style="color: black; text-align: left;list-style-type: disc;"><span
-                            style="margin-left:-4px">Use Google Forms and automated emails to collect information</span>
-                    </li>
-                    <li style="color: black; text-align: left;list-style-type: disc;"><span
-                        style="margin-left:-4px">Easily view which teachers/students have completed their forms and send reminder emails.</span>
-                </li>
-                </ul>
-            </blockquote>
-        </div>
+                <h6 class="left"><strong>Benefits for <span style="text-decoration: underline;">college
+                            counselors</span></strong>: </h6>
+                <br>
+                <blockquote>
+                    <ul style="margin-left: 20px;">
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px"> Track and control the entire pairing process from within a
+                                Google Sheet</span>
+                        </li>
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px">Ensure a fair process for students and teachers</span>
+                        </li>
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px">Use Google Forms and automated emails to collect
+                                information</span>
+                        </li>
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px">Quickly view which teachers/students have completed their
+                                forms.</span>
+                        </li>
+                        <li style="color: black; text-align: left;list-style-type: disc;"><span
+                                style="margin-left:-4px">Easily send reminder emails to teachers/students</span>
+                        </li>
+                    </ul>
+                </blockquote>
+            </div>
         </div>
         <div class="row" id="stats-area" style="display: none;">
             <div class="col l6">
@@ -179,20 +193,20 @@
                     <ul style="margin-left: 20px;">
                         <li style="color: black; text-align: left;list-style-type: disc;"><span
                                 style="margin-left:-4px">
-                                Pairings are made between students and teachers who want to be together</span></li>
+                                Pairings are made between students and teachers who both want to be together</span></li>
                         <li style="color: black; text-align: left;list-style-type: disc;"><span
                                 style="margin-left:-4px">Teachers can
-                                set hard limits on their quantity
-                                of letters</span> </li>
+                                set limits on their quantity
+                                of recommendation letters</span> </li>
                         <li style="color: black; text-align: left;list-style-type: disc;"><span
-                                style="margin-left:-4px">Everyone fills out one Google Form which takes ~2 minutes</span> </li>
+                                style="margin-left:-4px">Students and teachers fills out a Google Form which takes less than 2
+                                minutes</span> </li>
                     </ul>
                 </blockquote>
             </div>
             <div class="col l6">
                 <h1 class="teal-text" style="margin-top: 0;margin-bottom: 0;"><span id="count-percent">1</span>%</h1>
-                <span class="teal-text large-text">of students got their first or second teacher pair
-                    choice</span>&nbsp;&nbsp;&nbsp;<span>(live trial at <a
+                <span class="teal-text large-text">of students got their first or second choice of teacher recommenders</span>&nbsp;&nbsp;&nbsp;<span>(live trial at <a
                         href="https://www.friendsbalt.org">FSB</a>)</span>
 
             </div>
@@ -226,11 +240,10 @@
                         <ul>
                             <li class="step-li-item">Enter the emails of the students and teachers into
                                 a Google Sheet.</li>
-                            <li class="step-li-item">Click buttons to automatically generate forms and
-                                send them to the students.</li>
-                            <li class="step-li-item">The student form will ask each student to rank
-                                pairs of teacher
-                                recommenders.</li>
+                            <li class="step-li-item">Click buttons to automatically generate teacher selection form
+                                 and send it to the students.</li>
+                            <li class="step-li-item">The teacher selection form will ask each student to rank
+                                pairs of teacher recommenders.</li>
                         </ul>
                     </blockquote>
                 </div>
