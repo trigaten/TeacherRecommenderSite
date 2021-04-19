@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRS Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script>
+        $(document).ready(function () {
+            $('.materialboxed').materialbox();
+            $('.sidenav').sidenav();
+
+            if (screen.width > 768) {
+                $(".nav-extended, #title-area, #info-area, #stats-area, #cc-feat, #cc-feat2, #first-step, #second-step, #third-step, #black-line, #tutorial, #buy, #footer").each(function (i) {
+                    $(this).delay(i * 300).fadeIn(700);
+                });
+            } else {
+                $(".nav-extended, #title-area, #info-area, #stats-area, #cc-feat, #cc-feat2, #first-step, #second-step, #third-step, #black-line, #tutorial, #buy, #footer").each(function (i) {
+                    $(this).delay(i * 400).fadeIn(700);
+                });
+            }
+        });
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos || currentScrollPos < 20) {
+                document.getElementById("navbar").style.top = "120px";
+            } else {
+                document.getElementById("navbar").style.top = "-20px";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
+</head>
+
+<body>
+    <nav class="nav-extended indigo darken-3" style="height:70px;margin-top: -121px;display: none;top:120px"
+        id="navbar">
+        <div class="nav-wrapper">
+            <span class="hide-on-med-and-down left"><a href="#" class="brand-logo"><img src="images/logo.png"
+                        style="width:68px"></a>
+            </span>
+
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <span class="hide-on-med-and-up right"><a href="#" class="brand-logo"><img src="images/logo.png"
+                        style="width:68px"></a></span>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <!-- style="margin-left: 100px;" -->
+                <!-- <li><a href="what.html">What is this?</a></li> -->
+            </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <!-- <li><a href="#tutorial">FAQ</a></li> -->
+                <!-- <li><a href="#tutorial">Tutorial</a></li> -->
+                <li><a href="https://workspace.google.com/marketplace/app/teacher_recommender_system/410900919077">Download Here</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#buy">Buy<span class="new badge" data-badge-caption="Free Trial"></span>
+                    </a></li>
+            </ul>
+        </div>
+        <!-- <div class="nav-content teal lighten-2 center" style="padding:10px">
+             <a style="color: white"
+                href="mailto:TeacherRecSystem@gmail.com">This program is free for <b>underfunded</b> schools and is <b>free</b> to <b>try</b></a>
+        </div> -->
+    </nav>
+
+    <!-- side bar which appears for small screens -->
+    <ul class="sidenav sidenav-close" id="mobile-demo">
+        <!-- <li><a href="what.html">What is this?</a></li> -->
+        <!-- <li><a href="#tutorial">Tutorial</a></li> -->
+       <a href="https://workspace.google.com/marketplace/app/teacher_recommender_system/410900919077">Download Here</a></li>
+                <li><a href="FAQ.html">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#buy">Buy<span class="new badge" data-badge-caption="Free Trial"></span>
+                    </a></li>
+    </ul>
+    <div class="container" style="margin-top: 100px;">
+        <h1>That's a 404. Maybe go back to the <a href="index.html">main page</a>?</h1>
+    </div>
+</body>
+</html>
